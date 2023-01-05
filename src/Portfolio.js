@@ -5,23 +5,25 @@ const Portfolio = () => {
   const [charlie, setCharlie] = useState(false);
 
   function displayBitch() {
-    setCharlie(true);
+    setCharlie(!charlie);
     console.log(charlie);
   }
 
   if (!charlie) {
     return (
-      <div className="body-div" id="about-body">
+      <div className="body-div">
         <h1>Portfolio</h1>
         <button onClick={() => displayBitch()}>Click Me</button>
       </div>
     );
   } else if (charlie) {
-    <div className="body-div" id="about-body">
-      <h1>Portfolio</h1>
-      <button onClick={() => displayBitch()}>Click Me</button>
-      {/* <img src={charlieImg}></img> */}
-    </div>;
+    return (
+      <div className="body-div">
+        <h1>Portfolio</h1>
+        <button onClick={() => displayBitch()}>Click Me</button>
+        <img src={charlieImg}></img>
+      </div>
+    );
   }
 };
 
