@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Nav = () => {
   return (
     <header className="header">
-      <Link to="/">
+      <Link to="/personal-portfolio-react/">
         <h1 id="luke-logo">LUKE BOYETT</h1>
       </Link>
       <nav className="nav-links">

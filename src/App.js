@@ -25,7 +25,7 @@ function App() {
         <div className={pageClass}>
           <Nav />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/personal-portfolio-react/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/calendar" element={<Calendar />} />
@@ -41,7 +41,7 @@ function App() {
         <div className={pageClass}>
           <Nav />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/personal-portfolio-react/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/calendar" element={<Calendar />} />
