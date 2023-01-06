@@ -1,6 +1,8 @@
 import lukeImg from "./images/luke.jpeg";
 import Icon from "@mdi/react";
-import { mdiPlus } from "@mdi/js";
+import { mdiPlus, mdiMinus } from "@mdi/js";
+import { useState } from "react";
+import AboutButton from "./components/AboutButton";
 
 const About = () => {
   return (
@@ -8,30 +10,34 @@ const About = () => {
       <img id="luke-img" alt="Image of Luke" src={lukeImg} />
       <div className="about-div">
         <h2>Who am I?</h2>
-        <button className="info-button">
-          <h3>Anarchism</h3>
-          <div>
-            <Icon path={mdiPlus} title="User Profile" size={1} color="black" />
-          </div>
-        </button>
-        <button className="info-button">
-          <h3>BASE Jumping</h3>
-          <div>
-            <Icon path={mdiPlus} title="User Profile" size={1} color="black" />
-          </div>
-        </button>
-        <button className="info-button">
-          <h3>Psychedelics & Other Substances</h3>
-          <div>
-            <Icon path={mdiPlus} title="User Profile" size={1} color="black" />
-          </div>
-        </button>
-        <button className="info-button">
-          <h3>Web Development</h3>
-          <div>
-            <Icon path={mdiPlus} title="User Profile" size={1} color="black" />
-          </div>
-        </button>
+        <AboutButton
+          title="Anarchism"
+          textContent='"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.'
+        ></AboutButton>
+        <AboutButton
+          title="Base Jumping"
+          textContent='"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.'
+        ></AboutButton>
+        <AboutButton
+          title="Psychedelics & Other Substances"
+          textContent='"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.'
+        ></AboutButton>
+        <AboutButton
+          title="Web Development"
+          textContent='"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.'
+        ></AboutButton>
       </div>
     </div>
   );

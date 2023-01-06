@@ -148,7 +148,6 @@ ul {
   max-height: calc(100vh - 7em);
   display: flex;
   gap: 1em;
-  border: 1px solid black;
 }
 
 .body-div > h2 {
@@ -166,8 +165,6 @@ ul {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  align-items: stretch;
   gap: 1em;
 }
 
@@ -176,10 +173,36 @@ ul {
   font-weight: 500;
 }
 
-.info-button {
-  flex: 1 0 1;
-  border: 1px solid rgb(165, 132, 123, 1);
+.about-content {
+  display: flex;
+  flex-direction: column;
+}
 
+.collapsable-content {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 0px solid black;
+  overflow: hidden;
+  padding: 0px 20px;
+  max-height: 0;
+  transition-property: max-height, padding, border-bottom;
+  transition-duration: 0.5s;
+}
+
+.collapsable-content.active {
+  border-bottom: 1px solid black;
+  padding: 10px 20px;
+  max-height: 10em;
+}
+
+.info-button.active {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom: none;
+}
+
+.info-button {
+  border: 1px solid rgb(165, 132, 123, 1);
   background: linear-gradient(
     90deg,
     /* rgba(233, 138, 85, 1) 0%, */ rgba(0, 0, 0, 0) 0%,
@@ -188,13 +211,20 @@ ul {
   background-color: rgba(233, 138, 85, 1);
   font-size: 1.7em;
   font-weight: 400;
-  border-radius: 3px;
   padding: 0.5em 1.5em;
   height: min-content;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: 0.3s;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  white-space: nowrap;
+  transition-property: border-bottom, border-bottom-left-radius,
+    border-bottom-right-radius;
+  transition-duration: 0.5s;
 }
 
 .info-button:hover {
