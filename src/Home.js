@@ -1,11 +1,24 @@
 import beachSunsetImg from "./images/beach-sunset.jpg";
+import { useState, useEffect, useRef } from "react";
 
 const Home = () => {
+  const [spanClass, setSpanClass] = useState("");
+
   return (
     <div className="content">
       <div className="topdiv">
-        <img id="beach-sunset" src={beachSunsetImg} alt="" />
-        <div id="journey">Your journey starts here.</div>
+        <div id="beach-img-container">
+          <img
+            onMouseEnter={() => setSpanClass("journey-shimmer")}
+            onMouseLeave={() => setSpanClass("")}
+            id="beach-sunset"
+            src={beachSunsetImg}
+            alt=""
+          />
+        </div>
+        <div id="journey">
+          <span className={spanClass}>Your journey starts here.</span>
+        </div>
       </div>
     </div>
   );
